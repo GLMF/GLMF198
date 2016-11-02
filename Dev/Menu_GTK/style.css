@@ -1,0 +1,18 @@
+.button {padding:5px;/* border-color:#0FF000;*/}
+GtkButton#1, GtkButton#1 GtkLabel {margin:0;padding:0;background-color:#FF0000;} /* rouge */
+/*GtkButton#1:prelight {background-color:#FFAAAA;}*/
+GtkButton#2, GtkButton#2 GtkLabel {margin:0;padding:0;background-color:#FFFF00;} /* jaune */
+/*GtkButton#2:prelight {background-color:#FFFFE0;}*/
+GtkButton#3, GtkButton#3 GtkLabel {margin:0;padding:0;background-color:#00FF00;} /* vert */
+/*GtkButton#3:prelight {background-color:#AAFFAA;}*/
+GtkButton#4, GtkButton#4 GtkLabel {margin:0;padding:0;background-color:#0000FF;} /* bleu */
+/*GtkButton#4:prelight {background-color:#AAAAFF;}*/
+GtkButton#5, GtkButton#5 GtkLabel {margin:0;padding:0;background-color:#FFA500;} /* orange */
+/*GtkButton#5:prelight {background-color:#FFD700;}*/
+GtkButton#6, GtkButton#6 GtkLabel {margin:0;padding:0;background-color:#FFFFFF;} /* blanc */
+/*GtkButton#6:prelight {background-color:#F8F8FF;}*/
+GtkButton#7, GtkButton#7 GtkLabel {margin:0;padding:0;background-color:#9932CC;} /* violet */
+/*GtkButton#7:prelight {background-color:#EE82EE;}*/
+GtkButton#8, GtkButton#8 GtkLabel {margin:0;padding:0;background-color:#FF00FF;} /* fuchsia */
+/*GtkButton#8:prelight {background-color:#FFB6C1;}*/
+GtkEventBox {background-color:#FFEFBC;}/* zone popup - jaune clair */

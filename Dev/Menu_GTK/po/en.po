@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016 IUT de Beziers
+# This file is distributed under the same license as the cb-mastermind package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cb-mastermind 1.0\n"
+"Report-Msgid-Bugs-To: cb@iutbeziers.fr\n"
+"POT-Creation-Date: 2016-04-11 20:09+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: lib-mastermind.c:275
+msgid "Bien plac\303\251es"
+msgstr "Well placed"
+
+#: gtk3-menus-40.c:115
+msgid "D\303\251marrer une nouvelle partie"
+msgstr "Start a new game"
+
+#: lib-mastermind.c:295
+msgid "Gagn\303\251 en"
+msgstr "Win in"
+
+#: lib-mastermind.c:276
+msgid "Mal plac\303\251es"
+msgstr "Misplaced"
+
+#: gtk3-menus-40.c:120
+msgid "Mode expert"
+msgstr "Expert mode"
+
+#: gtk3-menus-40.c:121
+msgid "Modifier le mode expert"
+msgstr "Update expert mode"
+
+#: gtk3-menus-40.c:113
+msgid "Nouvelle partie"
+msgstr "New game"
+
+#: lib-mastermind.c:313
+msgid "Perdu en"
+msgstr "Lost in"
+
+#: gtk3-menus-40.c:103
+msgid "Quitter"
+msgstr "Quit"
+
+#: gtk3-menus-40.c:104
+msgid "Terminer l'<b>application</b>"
+msgstr "Stop the <b>application</b>"
+
+#: gtk3-menus-11.c:40
+msgid "_Jeu"
+msgstr "_Game"
+
+#: gtk3-menus-11.c:57
+msgid "_Mode expert"
+msgstr "_Expert mode"
+
+#: gtk3-menus-11.c:44
+msgid "_Nouvelle partie"
+msgstr "_New game"
+
+#: gtk3-menus-11.c:47
+msgid "_P\303\251f\303\251rences"
+msgstr "_Preferences"
+
+#: gtk3-menus-11.c:53
+msgid "_Quitter"
+msgstr "_Quit"
+
+#: gtk3-menus-11.c:60
+msgid "_Temps illimit\303\251"
+msgstr "_Unlimited time"
+
+#: lib-mastermind.c:295 lib-mastermind.c:313
+msgid "coups"
+msgstr "strokes"
+
+#: lib-mastermind.c:296
+msgid "et"
+msgstr "and"
+
+#: lib-mastermind.c:296
+msgid "secondes"
+msgstr "seconds"

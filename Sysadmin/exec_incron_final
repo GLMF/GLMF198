@@ -1,0 +1,72 @@
+#!/bin/bash
+
+EXT_IMAGES=(jpg png gif)
+EXT_AUDIO=(mp3 wav)
+EXT_VIDEO=(mkv avi mp4)
+EXT_DOC=(odt doc pdf txt)
+EXT_ARCHIVES=(tgz tar zip gz deb rpm)
+EXT_ALL=(EXT_IMAGES EXT_AUDIO EXT_VIDEO EXT_DOC EXT_ARCHIVES)
+
+usage() {
+  echo "$(basename ${0}) <type> <filename>"
+  echo "  <type> : IN_CLOSE_WRITE - standard file"
+  echo "           IN_MOVED_FROM - part file"
+  echo ""
+  echo "  Move the file <filename> in a dedicated directory"
+}
+
+move_in() {
+  file=${1}
+  dir=${2}
+
+  if ! [ -d ~/Telechargements/${dir} ]; then
+    mkdir ~/Telechargements/${dir}
+    /usr/bin/notify-send "Telechargements" \
+                         "Création de ${dir}"
+  fi
+
+  mv ~/Telechargements/${file} ~/Telechargements/${dir}
+  if [ ${?} -eq 0 ]; then
+    /usr/bin/notify-send "Telechargements (${dir})" \
+                       "Déplacement de ${file}"
+  fi
+}
+
+move_file() {
+  if [ -d ~/Telechargements/${2} ]; then
+    /usr/bin/notify-send "Telechargements" \
+                         "${2} est un repertoire
+- Aucune action -"
+  else
+    ext="${2##*.}"
+    ext="${ext,,}"
+    if [[ ${1} == "IN_MOVED_FROM" && ${ext} == "part" ]]; then
+      ext="${2%.*}"
+      ext="${ext##*.}"
+    fi
+    for ext_dir in ${EXT_ALL[@]}; do
+      write_dir="${ext_dir,,}"
+      write_dir="${write_dir:4}"
+      eval ext_current=\( \${${ext_dir}[@]} \)
+      if [[ ${ext_current[@]} =~ ${ext} ]]; then
+        if [ ${1} == "IN_CLOSE_WRITE" ]; then
+          move_in ${2} ${write_dir}
+        else
+          move_in ${2%.*} ${write_dir}
+        fi
+      fi
+    done
+  fi
+}
+
+run() {
+  if [ ${#} -ne 2 ]; then
+    usage
+    exit 1
+  fi
+
+  export DISPLAY=:0.0
+  move_file ${1} ${2}
+}
+
+run "${@}"
